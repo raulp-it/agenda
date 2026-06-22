@@ -4,6 +4,7 @@ from funciones import aguardar
 from funciones import obtener_tamano_terminal
 from funciones import centrar_texto
 from acerca import menu_acerca
+from altas import menu_altas
 
 # Llama a la función cuando necesites borrar la consola
 limpiar_pantalla()
@@ -34,7 +35,7 @@ def menu_principal():
         if opcion == '1':    
             print("Altas de Clientes")
             limpiar_pantalla()
-            #menu_altas()
+            menu_altas()
             limpiar_pantalla()
         elif opcion == '2':
             limpiar_pantalla()
