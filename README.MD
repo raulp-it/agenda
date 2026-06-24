@@ -1,5 +1,5 @@
 Agenda-Dbase-III-a-Python
-Agenda personal desarrollada originalmente en 1995 utilizando DBase III Plus sobre DOS.
+Agenda personal desarrollada originalmente en 1995 utilizando DBase III Plus sobre MS-DOS 5.0.
 
 Este proyecto nació como una herramienta para administrar contactos, teléfonos, direcciones y anotaciones personales en una época donde las agendas electrónicas y los teléfonos inteligentes aún no existían. Fue uno de mis primeros programas completos y representa una etapa importante de mi aprendizaje como programador.
 
@@ -24,3 +24,17 @@ agenda-dbase3/
 ├── capturas/
 ├── README.md
 └── licence.md
+
+agenda/
+│
+├── acerca.py
+├── agenda.py
+├── altas.py
+├── bajas.py
+├── conn.py
+├── funciones.py
+├── licence.md
+├── modificaciones.py
+├── listados.py
+├── presenta.py
+└── README.md

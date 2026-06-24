@@ -1,19 +1,24 @@
-import psycopg2 as psycopg
+import psycopg as psycopg_
 
-try:
-    conn = psycopg.connect(
-        host="localhost",
-        port=5432,
-        dbname="agenda",
-        user="agenda_user",
-        password="SoyLaComadreja"
-    )
+def obtener_conexion():
+    try:
+        conn = psycopg_.connect(
+            host="localhost",
+            port=5432,
+            dbname="agenda",
+            user="agenda_usr",
+            password="SoyLaComadreja"
+        )
+        print("Conectado a PostgreSQL")
+        return conn
+    except Exception as e:
+        print(f"Error: {e}")
+        return None
 
-    print("Conectado a PostgreSQL")
-
-except Exception as e:
-    print(f"Error: {e}")
-
-finally:
-    if 'conn' in locals():
+def cerrar_conexion(conn):
+    if conn is not None:
         conn.close()
+        print("Conexión cerrada")
+
+#obtener_conexion()
+#cerrar_conexion(obtener_conexion())
