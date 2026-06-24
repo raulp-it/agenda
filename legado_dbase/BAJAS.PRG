@@ -1,0 +1,45 @@
+**MENU BAJAS**
+STORE 0 TO VCOD
+STORE SPACE(1) TO SINO
+DO WHILE .T.
+  CLEAR
+  @1,1 TO 22,78 DOUBLE
+  @4,31 SAY 'BAJAS DE CLIENTES'
+  @3,30 TO 5,48
+  @21,2 SAY 'INGRESE CODIGO = (0 PARA SALIR)'
+  STORE 0 TO VCOD
+  @8,20 SAY 'CODIGO:    'GET VCOD PICTURE '9999'
+  READ
+  IF VCOD = 0 
+       EXIT
+  ENDIF
+  SEEK VCOD
+  IF EOF()
+       @12,15 SAY 'EL CLIENTE ESPECIFICADO NO EXISTE'
+       @23,23
+       WAIT 'PULSE UNA TECLA PARA CONTINUAR'
+       @23,0
+       LOOP
+
+  ELSE
+      @10,20 SAY 'APELLIDO:      '+ APEL
+      @12,20 SAY 'NOMBRE:        '+ NOM
+      @14,20 SAY 'DIRECCION:     '+ DIR
+      @16,20 SAY 'CODIGO POSTAL:'+ STR(C_P)
+      @18,20 SAY 'SALDO:        '+ STR(SALDO)
+      @20,20 SAY 'CONFIRMAR LA BAJA? (S/N)'GET SINO PICT '!'
+      READ
+      IF SINO='S'
+            DELETE
+            CLEAR
+      ELSE
+            CLEAR
+            LOOP
+      ENDIF
+  ENDIF
+ENDDO
+PACK
+CLEAR 
+RETURN
+    
+   
