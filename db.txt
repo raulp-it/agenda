@@ -1,0 +1,14 @@
+#CREATE DATABASE agenda;
+#CREATE USER agenda_usr WITH PASSWORD 'SoyLaComadreja';
+#GRANT ALL PRIVILEGES ON DATABASE agenda TO agenda_usr;
+#CREATE TABLE agenda (
+    id SERIAL PRIMARY KEY,
+    codigo VARCHAR(20) NOT NULL UNIQUE,
+    apellido VARCHAR(150) NOT NULL,
+    nombre VARCHAR(50),
+    domicilio VARCHAR(80),
+    cp VARCHAR(4),
+    email VARCHAR(50),
+    activo BOOLEAN NOT NULL DEFAULT TRUE,
+    fecha_alta TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

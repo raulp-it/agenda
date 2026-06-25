@@ -1,0 +1,20 @@
+# Entorno virtual
+.venv/
+
+# Cache de Python
+__pycache__/
+*.pyc
+
+# Configuración local
+.env
+
+# Archivos temporales de VS Code
+.vscode/
+
+# Código original en DBase
+#Dbase Original/
+
+# Otros ignorados
+*.bak
+*.tmp
+*.log
