@@ -35,6 +35,16 @@ agenda/
 ├── funciones.py
 ├── licence.md
 ├── modificaciones.py
-├── listados.py
+├── listado.py
 ├── presenta.py
 └── README.md
+
+## Estado del proyecto
+
+- ✅ Presentación
+- ✅ Altas
+- ✅ Bajas
+- 🚧 Modificaciones
+- 🚧 Listados
+- ⏳ Búsquedas
+- ⏳ Informes
