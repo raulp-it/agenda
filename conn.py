@@ -9,7 +9,7 @@ def obtener_conexion():
             user="agenda_usr",
             password="SoyLaComadreja"
         )
-        print("Conectado a PostgreSQL")
+        #print("Conectado a PostgreSQL")
         return conn
     except Exception as e:
         print(f"Error: {e}")
@@ -18,7 +18,7 @@ def obtener_conexion():
 def cerrar_conexion(conn):
     if conn is not None:
         conn.close()
-        print("Conexión cerrada")
+        #print("Conexión cerrada")
 
 #obtener_conexion()
 #cerrar_conexion(obtener_conexion())

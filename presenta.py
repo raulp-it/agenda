@@ -10,7 +10,7 @@ def presentacion():
 
     separador = "█" 
 
-    texto = f"Desarrollos Informáticos SCPC Labs - (c) {anio_actual}"
+    texto = f"SCPC Labs: Desarrollos Informáticos - (c) {anio_actual}"
     texto = texto.center(ancho)
     print("\n")
     for letra in texto:
@@ -20,7 +20,7 @@ def presentacion():
 
     print("\n")
     print(separador*ancho)
-    texto = f"Agenda de Clientes v2.0 - Desarrollada por Raul Peralta"
+    texto = f"Agenda de Contactos v2.0 - Desarrollada por Raul Peralta"
     texto = texto.center(ancho)
     print("\n")
     for letra in texto:

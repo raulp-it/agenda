@@ -19,3 +19,6 @@ __pycache__/
 *.tmp
 *.log
 db.txt
+historic.txt
+*.odt
+*.doc

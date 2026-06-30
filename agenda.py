@@ -1,10 +1,11 @@
 from presenta import presentacion
-from funciones import limpiar_pantalla
-from funciones import aguardar
-from funciones import obtener_tamano_terminal
-from funciones import centrar_texto
+from funciones import limpiar_pantalla, aguardar, obtener_tamano_terminal, centrar_texto, en_construccion
 from acerca import menu_acerca
 from altas import menu_altas
+from bajas import menu_bajas
+from listado import menu_listado
+from modificaciones import menu_modificaciones
+from imprimir import menu_imprimir
 
 # Llama a la función cuando necesites borrar la consola
 limpiar_pantalla()
@@ -30,35 +31,36 @@ def menu_principal():
         print("\t4. Listado de Clientes")
         print("\t5. Imprimir Listado")
         print("\t6. Acerca de este proyecto")
-        
         opcion = input("\nSelecciona una opción: ")
-        if opcion == '1':    
-            print("Altas de Clientes")
+        if opcion == '1':
+            # Alta de Contactos
             limpiar_pantalla()
             menu_altas()
             limpiar_pantalla()
         elif opcion == '2':
+            # Baja de Contactos
             limpiar_pantalla()
-            print("Bajas de Clientes")
-            limpiar_pantalla()
-            #menu_bajas()
+            menu_bajas()
             limpiar_pantalla()
         elif opcion == '3':
-            print("Modificación de Clientes")
+            # Modificacion de Contactos
             limpiar_pantalla()
-            #menu_presupuestos()
+            print(f"Modificacion de Contactos")
+            #en_construccion()
+            menu_modificaciones()
             limpiar_pantalla()
         elif opcion == '4':
-            print("Listado de Clientes")
+            # Listado Contactos
             limpiar_pantalla()
-            #menu_listado()
+            menu_listado()
             limpiar_pantalla()
         elif opcion == '5':
-            print("Imprimir Listado")
+            # Imprimir de Contactos
             limpiar_pantalla()
-            #menu_imprimir()
+            menu_imprimir()
             limpiar_pantalla()
         elif opcion == '6':
+            # Acerca de
             print("Acerca de este proyecto")
             limpiar_pantalla()
             menu_acerca()
@@ -67,7 +69,7 @@ def menu_principal():
             print("Saliendo del programa...")
             limpiar_pantalla()
             break
-        else:            
+        else:
             print("Opción no válida, por favor selecciona una opción del 0 al 6.")
             input("\nPresiona Enter para continuar...")
             limpiar_pantalla()
