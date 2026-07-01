@@ -47,7 +47,7 @@ def desactivar_contacto(codigo):
     finally:
         cerrar_conexion(conn)
 
-# Activar cliente previamente desactivado por codigo de cliente.
+# Cliente previamente desactivado por codigo de cliente.
 def activar_contacto(codigo):
     conn = obtener_conexion()
     try:
