@@ -112,7 +112,7 @@ def listar_contactos(cod_des, cod_has):
                 """
                 SELECT codigo, apellido, nombre, domicilio,
                 cp, email, activo, telefono, localidad from age_base
-                where id >=%s and id <=%s order by codigo asc;
+                where id >=%s and id <=%s order by codigo::INTEGER asc;
                 """,
                 (cod_des,
                  cod_has)
@@ -141,5 +141,32 @@ def mostrar_listado():
             return cursor.fetchall()            
     except Exception as e:
         input(f"No se pudo realizar la consulta. Pulse ENTER para continuar")
+    finally:
+        cerrar_conexion(conn)
+
+def modificar_contacto(new_apellido, new_nombre, new_domicilio, new_cp, new_email, new_telefono, new_localidad, codigo):
+    conn=obtener_conexion()
+    if conn is None:
+        print("No se pudo establecer la conexión a la base de datos. Saliendo del programa.")
+        exit(1)
+    try:
+        with conn.cursor() as cursor:
+            cursor.execute(
+                """
+                UPDATE age_base
+                SET apellido = %s,
+                    nombre = %s,
+                    domicilio = %s,
+                    cp = %s,
+                    email = %s,
+                    telefono = %s,
+                    localidad = %s
+                WHERE codigo = %s
+                """,
+                (new_apellido, new_nombre, new_domicilio, new_cp, new_email, new_telefono, new_localidad, codigo)
+            )
+            conn.commit()
+    except Exception as e:            
+            input(f"Error al modificar el cliente: {e}, presiona Enter para continuar...")
     finally:
         cerrar_conexion(conn)
