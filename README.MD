@@ -44,7 +44,7 @@ agenda/
 - ✅ Presentación
 - ✅ Altas
 - ✅ Bajas
-- 🚧 Modificaciones
+- ✅ Modificaciones
 - 🚧 Listados
 - ⏳ Búsquedas
 - ⏳ Informes
