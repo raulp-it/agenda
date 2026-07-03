@@ -170,3 +170,21 @@ def modificar_contacto(new_apellido, new_nombre, new_domicilio, new_cp, new_emai
             input(f"Error al modificar el cliente: {e}, presiona Enter para continuar...")
     finally:
         cerrar_conexion(conn)
+
+def buscar_max_id():
+    conn=obtener_conexion()
+    if conn is None:
+        print("No se pudo establecer la conexión a la base de datos. Saliendo del programa.")
+        exit(1)
+    try:
+        with conn.cursor() as cursor:
+            cursor.execute(
+                """
+                SELECT MAX(id) FROM age_base;
+                """
+                )
+            return cursor.fetchone()[0]            
+    except Exception as e:
+        input(f"No se pudo realizar la consulta. Pulse ENTER para continuar")
+    finally:
+        cerrar_conexion(conn)
