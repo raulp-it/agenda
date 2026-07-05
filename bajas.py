@@ -1,5 +1,5 @@
 from funciones import limpiar_pantalla, aguardar, imprimir_encabezado
-from consultas import buscar_contacto, desactivar_contacto
+from consultas import buscar_contacto, desactivar_contacto, eliminar_contacto
 
 
 def menu_bajas():
@@ -36,3 +36,5 @@ def menu_bajas():
             continue        
         elif tip_elim == 'D':
             desactivar_contacto(codigo)
+        elif tip_elim == 'E':
+            eliminar_contacto(codigo)

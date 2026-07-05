@@ -1,6 +1,5 @@
 from conn import obtener_conexion, cerrar_conexion
 
-
 # Busqueda de cliente por codigo de cliente.
 def buscar_contacto(codigo):
     conn = obtener_conexion()
