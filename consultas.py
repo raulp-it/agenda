@@ -187,3 +187,45 @@ def buscar_max_id():
         input(f"No se pudo realizar la consulta. Pulse ENTER para continuar")
     finally:
         cerrar_conexion(conn)
+
+def buscar_por_nombre(nombre):
+    conn=obtener_conexion()
+    if conn is None:
+        print("No se pudo establecer la conexión a la base de datos. Saliendo del programa.")
+        exit(1)
+    try:
+        with conn.cursor() as cursor:
+            cursor.execute(
+                """
+                SELECT codigo, apellido, nombre, domicilio,
+                cp, email, activo, telefono, localidad from age_base
+                WHERE nombre ILIKE %s
+                """,
+                (f"%{nombre}%",)
+            )
+            return cursor.fetchall()            
+    except Exception as e:
+        input(f"No se pudo realizar la consulta. Pulse ENTER para continuar")
+    finally:
+        cerrar_conexion(conn)
+
+def buscar_por_apellido(apellido):
+    conn=obtener_conexion()
+    if conn is None:
+        print("No se pudo establecer la conexión a la base de datos. Saliendo del programa.")
+        exit(1)
+    try:
+        with conn.cursor() as cursor:
+            cursor.execute(
+                """
+                SELECT codigo, apellido, nombre, domicilio,
+                cp, email, activo, telefono, localidad from age_base
+                WHERE apellido ILIKE %s order by nombre asc
+                """,
+                (f"%{apellido}%",)
+            )
+            return cursor.fetchall()            
+    except Exception as e:
+        input(f"No se pudo realizar la consulta. Pulse ENTER para continuar")
+    finally:
+        cerrar_conexion(conn)

@@ -6,6 +6,7 @@ from bajas import menu_bajas
 from listado import menu_listado
 from modificaciones import menu_modificaciones
 from imprimir import menu_imprimir
+from buscar import menu_buscar
 
 # Llama a la función cuando necesites borrar la consola
 limpiar_pantalla()
@@ -30,7 +31,8 @@ def menu_principal():
         print("\t3. Modificar Clientes")
         print("\t4. Listado de Clientes")
         print("\t5. Imprimir Listado")
-        print("\t6. Acerca de este proyecto")
+        print("\t6. Buscar Clientes")
+        print("\t7. Acerca de este proyecto")
         opcion = input("\nSelecciona una opción: ")
         if opcion == '1':
             # Alta de Contactos
@@ -60,6 +62,12 @@ def menu_principal():
             menu_imprimir()
             limpiar_pantalla()
         elif opcion == '6':
+            # Buscar Contactos
+            print("Buscando Contactos...")
+            # en_construccion()
+            menu_buscar()
+            limpiar_pantalla()
+        elif opcion == '7':
             # Acerca de
             print("Acerca de este proyecto")
             limpiar_pantalla()
@@ -70,7 +78,7 @@ def menu_principal():
             limpiar_pantalla()
             break
         else:
-            print("Opción no válida, por favor selecciona una opción del 0 al 6.")
+            print("Opción no válida, por favor selecciona una opción del 0 al 7.")
             input("\nPresiona Enter para continuar...")
             limpiar_pantalla()
 
