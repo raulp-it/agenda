@@ -26,7 +26,7 @@ legado-dbase/
 |-- modif.prg
 |── licence.md
 
-agenda/
+Agenda-Dbase-III-a-Python/
 │
 ├── acerca.py
 ├── agenda.py
@@ -52,4 +52,3 @@ agenda/
 - ✅ Modificaciones
 - ✅ Listados
 - ✅ Búsquedas
-- ⏳ Informes
