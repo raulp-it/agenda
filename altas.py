@@ -1,7 +1,5 @@
-from funciones import imprimir_encabezado
-from funciones import limpiar_pantalla
-from funciones import aguardar
-from consultas import insertar_contacto, buscar_max_id
+from funciones import imprimir_encabezado, limpiar_pantalla, aguardar
+from consultas import insertar_contacto, buscar_max_id, buscar_por_codigo
 
 def menu_altas():
     titulo = "ALTAS DE CLIENTES"
@@ -12,14 +10,21 @@ def menu_altas():
         print("Presione Enter para asignar automáticamente un código al nuevo cliente.")
         codigo = input("Código: ").strip()
         if codigo == '0':
-            print("\nVolviendo al menú principal...")
-            aguardar()
+            print("\nVolviendo al menú principal...")            
             break
         if codigo=="":
             id = buscar_max_id() + 1
             codigo = str(id)
             print(f"Se asignará el código {codigo} al nuevo cliente.")
             print(f"Codigo: {codigo}")
+        # Issue #1 Buscar que el codigo no exista en la base de datos antes de insertar un nuevo cliente
+        buscar_codigo = buscar_por_codigo(codigo)
+        if buscar_codigo:
+            print(f"El código {codigo} ya existe en la base de datos.")
+            aguardar()
+            buscar_new_id = buscar_max_id()
+            codigo = (buscar_new_id + 1)
+            print(f"Se asignará el código {codigo} al nuevo cliente.")
         apellido = input("Apellido: ")
         nombre = input("Nombre: ")
         domicilio = input("Domicilio: ")
