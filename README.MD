@@ -11,19 +11,20 @@ Los archivos incluidos en este repositorio corresponden al código fuente origin
 
 Más que una simple agenda, este proyecto es una pequeña cápsula del tiempo que refleja una etapa de aprendizaje, experimentación y pasión por la informática.
 
-agenda-dbase3/
-├── fuente/
-│   ├── agenda.prg
-│   ├── age_base.dbf
-│   ├── age_base.ndx
-│   ├── altas.prg
-│   ├── bajas.prg
-│   ├── impre.prg
-│   ├── list.prg
-│   └── modif.prg
-├── capturas/
-├── README.md
-└── licence.md
+legado-dbase/
+|-- capturas/
+|   |--Agenda 01.png
+|   |--Agenda 01.png
+|-- README.md
+|-- agenda.prg
+|-- age_base.dbf
+|-- age_base.ndx
+|-- altas.prg
+|-- bajas.prg
+|-- impre.prg
+|-- list.prg
+|-- modif.prg
+|── licence.md
 
 agenda/
 │
@@ -31,13 +32,17 @@ agenda/
 ├── agenda.py
 ├── altas.py
 ├── bajas.py
+├── buscar.py
 ├── conn.py
+├── consultas.py
 ├── funciones.py
+├── imprimir.py
 ├── licence.md
-├── modificaciones.py
 ├── listado.py
+├── modificaciones.py
 ├── presenta.py
-└── README.md
+├── README.md
+└── requirements.txt
 
 ## Estado del proyecto
 
@@ -45,6 +50,6 @@ agenda/
 - ✅ Altas
 - ✅ Bajas
 - ✅ Modificaciones
-- 🚧 Listados
-- ⏳ Búsquedas
+- ✅ Listados
+- ✅ Búsquedas
 - ⏳ Informes
