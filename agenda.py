@@ -1,5 +1,5 @@
 from presenta import presentacion
-from funciones import limpiar_pantalla, aguardar, obtener_tamano_terminal, centrar_texto, en_construccion
+from funciones import limpiar_pantalla, aguardar, obtener_tamano_terminal, centrar_texto
 from acerca import menu_acerca
 from altas import menu_altas
 from bajas import menu_bajas
