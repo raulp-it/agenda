@@ -1,2 +1,2 @@
-[] El contacto se desactiva en bajas. -> En modificaciones: crear una opcion tipo menu para activar un contacto desactivado.
+[v] El contacto se desactiva en bajas. -> En modificaciones: crear una opcion tipo menu para activar un contacto desactivado.
 [v] En altas hay un insert. Hay que moverlo a consultas.py

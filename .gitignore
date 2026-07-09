@@ -19,6 +19,7 @@ __pycache__/
 *.tmp
 *.log
 db.txt
+notas.txt
 historic.txt
 *.odt
 *.doc
