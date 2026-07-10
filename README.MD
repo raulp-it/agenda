@@ -56,5 +56,5 @@ Agenda-Dbase-III-a-Python/
 Actualización:
 
 Hace dos dias encontre el libro en Mercado Libre a un precio casi de regalo y lo compré.
-A pesar de ser otra edicion sin la protección anti-copia (Texto en color celeste con fondo de letras repetidas que decian "MasterChip Computacion" repetido a lo largo de toda la hoja), es la emocion de haber recuperado el libro que me enseño los comanando basicos de DBase, y a programar.
+A pesar de ser otra edicion sin la protección anti-copia (Texto en color celeste con fondo de letras repetidas que decian "MasterChip Computacion" repetido a lo largo de toda la hoja), es la emocion de haber recuperado el libro que me enseño los comanndos basicos de DBase, y a programar.
 La version en mi poder es la 3° de 1991.
