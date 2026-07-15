@@ -29,13 +29,13 @@ def menu_listado():
         print(separador * ancho)
         print(f"{{titulo:^{ancho}}}".format(titulo=titulo))
         print(separador * ancho)        
-        print(f"{'Código':<8}{'Apellido':<20}{'Nombre':<22}{'Teléfono':<15}")
+        print(f"{'Código':<8}{'Apellido':<20}{'Nombre':<28}{'Teléfono':<15}")
         print("_" * ancho)
         for fila in result:
             print(
             f"{fila[0]:<8}"
             f"{fila[1]:<20}"
-            f"{fila[2]:<22}"
+            f"{fila[2]:<28}"
             f"{fila[7]:<15}"
         )
         print("_" * ancho)

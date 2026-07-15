@@ -19,13 +19,13 @@ def menu_imprimir():
             result = mostrar_listado()
             limpiar_pantalla()
             print(separador * ancho)
-            print(f"{'Código':<7}{'Apellido':<15}{'Nombre':<15}{'Domicilio':<25}{'Teléfono':<10}")
+            print(f"{'Código':<7}{'Apellido':<15}{'Nombre':<22}{'Domicilio':<25}{'Teléfono':<10}")
             print(separador * ancho)
             for fila in result:
                 print(
                     f"{fila[0]:<7}"
                     f"{fila[1]:<15}"
-                    f"{fila[2]:<15}"
+                    f"{fila[2]:<22}"
                     f"{fila[3]:<25}"
                     f"{fila[7]:<10}"                    
                 )
